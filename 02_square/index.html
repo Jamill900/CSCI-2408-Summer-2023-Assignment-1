@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <!-- You can only modify the contents of shaders -->
+        <script id="vertex-shader" type="notjs">
+            attribute vec4 vPosition;
+    
+            void main() {
+                gl_Position = vPosition;
+            }
+        </script>
+    
+        <script id="fragment-shader" type="notjs">
+            precision mediump float;
+    
+            void main() {
+                gl_FragColor = vec4(1, 0, 0, 1);
+            }
+        </script>
+
+        <script src="../_common/webgl-utils.js"></script>
+        <script src="../_common/initShaders.js"></script>
+        <script src="../_common/MV.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <center>
+            <canvas id="webgl-canvas" width="800" height="800">
+                Your browser doesn't support WebGL.
+            </canvas>
+        </center>
+        <br><br>
+        <center>
+            <span>Choose rendering modee:</span>
+            <br><br>
+            <button id="strip-mode">STRIP</button>
+            <button id="fan-mode">FAN</button>
+            <button id="clear-canvas">CLEAR</button>
+        </center>
+    </body>
+</html>
